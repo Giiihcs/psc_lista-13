@@ -1,0 +1,26 @@
+public class Funcionario extends Pessoa {
+
+    private double salario;
+    private String cargo;
+
+    // Construtor
+    public Funcionario(String nome, String cpf, int idade, double salario, String cargo) {
+        super(nome, cpf, idade); // chama o construtor da superclasse Pessoa
+        this.salario = salario;
+        this.cargo = cargo;
+    }
+
+    // Método: calcular salário anual
+    public double calcularSalarioAnual() {
+        return salario * 12;
+    }
+
+    // Getters (opcional, mas útil)
+    public double getSalario() {
+        return salario;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+}
