@@ -1,0 +1,38 @@
+public class TesteHeranca {
+    public static void main(String[] args) {
+        
+        // 1. Instância de Pessoa
+        Pessoa pessoa = new Pessoa("Ana Souza", "123.456.789-00", 28);
+        
+        // 2. Instância de Funcionario
+        Funcionario funcionario = new Funcionario(
+            "Carlos Lima",
+            "987.654.321-00",
+            35,
+            3500.00,
+            "Analista"
+        );
+        
+        // 3. Instância de Gerente
+        Gerente gerente = new Gerente(
+            "Mariana Silva",
+            "555.666.777-88",
+            40,
+            7200.00,
+            "Gerente de Projetos",
+            "Tecnologia"
+        );
+
+        // 4. Exibir dados de cada instância
+        System.out.println("=== Dados da Pessoa ===");
+        pessoa.exibirDadosBasicos();
+
+        System.out.println("\n=== Dados do Funcionário ===");
+        funcionario.exibirDadosBasicos();
+        System.out.println("Salário anual: R$ " + funcionario.calcularSalarioAnual());
+
+        System.out.println("\n=== Dados do Gerente ===");
+        gerente.exibirDadosBasicos();
+        System.out.println("Salário anual: R$ " + gerente.calcularSalarioAnual());
+    }
+}
