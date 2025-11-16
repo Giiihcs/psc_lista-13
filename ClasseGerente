@@ -1,0 +1,20 @@
+public class Gerente extends Funcionario {
+
+    private String departamento;
+
+    // Construtor
+    public Gerente(String nome, String cpf, int idade, double salario, String cargo, String departamento) {
+        super(nome, cpf, idade, salario, cargo); // chama o construtor de Funcionario
+        this.departamento = departamento;
+    }
+
+    @Override
+    public void exibirDadosBasicos() {
+        // Chama o método da classe Pessoa
+        super.exibirDadosBasicos();
+
+        // Agora imprime os dados específicos
+        System.out.println("Cargo: " + getCargo());
+        System.out.println("Departamento: " + departamento);
+    }
+}
